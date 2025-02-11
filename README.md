@@ -1,9 +1,9 @@
 # Emergency Response Plan
 
-In the spirit of "buy a plunger before you need a plunger" this repo hopes to provide teams with an emergency response plan before they need one. This will not fit every use case, but it should provide a skeleton to adapt to general needs. This is intended for software teams, not other emergency response systems (EMT, fire, safety, etc) even though there may be overlap. This template was inspired by the traiging methodology of EMTs.
+In the spirit of "buy a plunger before you need a plunger" this repo hopes to provide teams with an emergency response plan before they need one. This will not fit every use case, but it should provide a skeleton to adapt to general needs. This is intended for software teams, not other emergency response systems (EMT, fire, safety, etc) even though there may be overlap. This template was inspired by the triaging methodology of EMTs.
 
 Emergency Response Plans are not an exhaustive solution to incident response. Other important parts of incident response include:
-	- On call responsibility definitionj
+	- On call responsibility definition
 	- Monitoring and observability of software systems
 	- Engineering for disaster recovery and high availability (if appropriate)
 	- Proper training on tools and technologies
@@ -19,12 +19,12 @@ Emergency Response Plans are not an exhaustive solution to incident response. Ot
 ## Considerations
 
 - The plan is only useful if people are aware of it. The plan should be written for those who will use it.
-- The plan should be digestable and actionable. No one will read it if is too long.
+- The plan should be digestible and actionable. No one will read it if it is too long.
 - Do not detail out every possible scenario in the plan. If your problems and solutions are well defined, then they are not emergencies - they are business as usual. Create runbooks and a normal support flow instead.
 - This template uses informal language. This is not to undercut the importance of the emergency but to make the content more consumable.
-- Have multiple methods to do things. If there is ever a large scale outage it is possible that your monitoring and alerting tools will be down. Having other means of interacting with your system will give you options.
+- Have multiple methods to do things. If there is ever a large-scale outage it is possible that your monitoring and alerting tools will be down. Having other means of interacting with your system will give you options. If your Slack or Discord or [primary communication channel] is down, does your team know how to connect another way?
 - Be aware of the risk of false positives and false negatives. Be clear about your observations versus hypothesis. Understand what a [gettier case](https://en.wikipedia.org/wiki/Gettier_problem) is as these are some of the most useful lessons during post mortems.
-- Be aware of bias for repeat issues
+- Be aware of bias for repeat issues. If something has broken one way (e.g. database got full and broke things), check other similar projects (e.g. that use the same type of database). 
 - Remember that the team is human. People need breaks, coffee, food, and eventually sleep.
 
 ## Musings
@@ -36,3 +36,7 @@ Unless you have years of experience handling critical situations you will likely
 Some engineers are not used to the sudden chaos of a production outage. They are immediately overwhelmed by the amount of data they must sift through, the number of incoming pings, and the sudden (and often angry) pressure coming from leadership. No plan is going to adequately prepare you mentally for this challenge. Mental grit comes with practice and experience, in the meantime:
 
 Don't panic. Breathe. Take notes.
+
+"The opposite of fear is curiosity"
+
+How can you keep panic and fear at bay when customers are angry and the damages seem to be escalating? Stay curious; be a scientist. Write down a hypothesis of what is broken, some methodologies to gather data to prove/disprove the hypothesis, and then go collect that data. Try to use the mindset "Huh, I wonder why that is" instead of "Oh no, everything is broken".
